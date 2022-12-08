@@ -1,5 +1,6 @@
 name: Thunder ⚡ Build Apk
-
+description: 'Sends build apks to Telegram'
+author: 'dishapatel010'
 inputs:
   token:
     required: true
