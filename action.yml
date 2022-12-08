@@ -1,6 +1,10 @@
 name: Thunder ⚡ Build Apk
 description: 'Sends build apks to Telegram'
 author: 'dishapatel010'
+branding:
+  icon: 'alert-triangle'
+  color: 'red'
+
 inputs:
   token:
     required: true
