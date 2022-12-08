@@ -59,13 +59,13 @@ runs:
         asset_content_type: application/aab
 
     - name: Fetch public keystore
-      run: wget https://github.com/tytydraco/public-keystore/raw/main/public.jks
+      run: wget https://github.com/dishapatel010/Thunder/raw/Z/keystore.jks
       shell: bash
 
     - name: Sign release APK
       run: |
         apksigner="$(find $ANDROID_SDK_ROOT/build-tools -name apksigner | sort -r | head -n 1)"
-        "$apksigner" sign --ks public.jks --ks-key-alias public --ks-pass pass:public --key-pass pass:public --in ./app/build/outputs/apk/release/app-release-unsigned.apk --out ./app/build/outputs/apk/release/app-release.apk
+        "$apksigner" sign --ks keystore.jks --ks-key-alias mydomain --ks-pass pass:password --key-pass pass:password --in ./app/build/outputs/apk/release/app-release-unsigned.apk --out ./app/build/outputs/apk/release/app-release.apk
       shell: bash
 
     - name: Upload signed release APK
